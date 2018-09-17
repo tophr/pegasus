@@ -21,7 +21,6 @@
 <script src="//use.typekit.net/eaj0qum.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
 <?php wp_head(); ?>
-<?php include_once("inc/analyticstracking.php") ?>
 </head>
 <body <?php body_class(); ?>>
 <div class="wrapper">
@@ -29,20 +28,13 @@
 	<div class="container">
 		<div class="row">
 			<div class="span7">
-				<h1 class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php dynamic_sidebar( 'sidebar-header' ); ?>
+				<h1 class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>				
 				<h2 class="tagline"><?php bloginfo('description'); ?></h2>
 			</div>
 			<div class="span5 header-utility">
 				<?php get_search_form(); ?>
 				<div class="ordering-links">
-					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="display: inline-block;">
-					<input type="hidden" name="cmd" value="_s-xclick">
-					<input type="hidden" name="hosted_button_id" value="P28ULGFE6PF9U">
-					<input type="submit" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" value="Donate" class="btn btn-primary">
-					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-				</form>
-				<a href="https://web.ovationtix.com/trs/cal/216" target="_blank" class="btn btn-primary">Buy Tickets</a> 
+					<?php dynamic_sidebar( 'sidebar-header' ); ?>
 				</div>
 				<div class="social-links">
 					<ul><li><a href="https://twitter.com/PegasusThtrChi" target="_blank" class="social-twitter">Twitter</a></li></ul>

@@ -78,9 +78,9 @@
 				<!-- the loop -->
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>					
 					<div class="news-item">
-						<p class="news-headline h3">
+						<h2 class="news-headline">
 							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-							<span class="date"><?php the_date(); ?></span></p>
+							<span class="date"><?php the_date(); ?></span></h2>
 						<?php the_post_thumbnail(); ?>	
 						<?php the_content(); ?>
 						<p><a href="<?php the_permalink(); ?>">Read more <span class="yellow">&raquo;</span></a></p>
