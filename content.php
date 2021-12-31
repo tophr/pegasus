@@ -7,11 +7,11 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
-		
+
 		<?php endif; ?>
 		<div class="entry-div">
 			<?php the_post_thumbnail(); ?>
-			<?php if ( is_single() ) : ?>
+			<?php if ( is_single() || is_page() ) : ?>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 			<?php else : ?>
 			<h1 class="entry-title">
@@ -36,7 +36,7 @@
 		</div><!-- .entry-content -->
 		<?php endif; ?>
 
-		<div class="entry-meta">			
+		<div class="entry-meta">
 			<?php edit_post_link( __( 'Edit', 'pegasus' ), '<span class="edit-link">', '</span>' ); ?>
 			<?php if ( is_singular() && get_the_author_meta( 'description' ) && is_multi_author() ) : // If a user has filled out their description and this is a multi-author blog, show a bio on their entries. ?>
 				<div class="author-info">
